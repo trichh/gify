@@ -1,0 +1,69 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: geneva;
+}
+.navbar {
+  min-height: 115px;
+}
+.navbar-default {
+  background-color: #222222;
+}
+nav img {
+  padding-left: 40px;
+}
+.navbar-form {
+  margin: 40px 30px 0 0;
+}
+.form-control {
+  margin-right: 15px;
+}
+#homepage article, #homepage h1 {
+  display: inline;
+}
+#homepage article:nth-of-type(2) {
+  margin-top: 75px;
+  padding-left: 85px;
+}
+#homepage article:nth-of-type(2) h1 {
+  font-size: 50px;
+}
+#homepage article:nth-of-type(2) h2 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 23px;
+}
+#homepage article:nth-of-type(2) form {
+  width: 380px;
+  margin-left: 25px;
+  border: solid 1px black;
+  border-radius: 8px;
+}
+#homepage article:nth-of-type(2) form input {
+  width: 315px;
+  margin-left: 30px;
+}
+#homepage article:nth-of-type(2) form input:nth-of-type(1) {
+  margin-top: 20px;
+}
+#homepage article:nth-of-type(2) form button {
+  width: 100px;
+  margin: 0 0 20px 135px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
+}
+.footer p {
+  margin: 18px 0 0 60px;
+}
+.footer p span {
+  font-weight: bolder;
+}
