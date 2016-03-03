@@ -77,42 +77,49 @@ nav img {
   width: 100px;
   margin: 0 0 20px 135px;
 }
-#feed article:nth-of-type(1) h1 {
+#feed article:nth-of-type(1) h1, #profile article:nth-of-type(1) h1 {
   display: inline-block;
   margin: 30px 0 0 500px;
   font-size: 65px;
 }
-#feed .postLarge {
+#feed .postLarge, #profile .postLarge {
   width: 501px;
   height: 330px;
-  margin: 30px 0 0 400px;
+  margin-top: 30px;
   padding: 0;
   border: solid 1px black;
 }
-#feed .postLarge:last-of-type {
+#feed .postLarge {
+  margin-left: 400px;
+}
+#profile .postLarge:nth-of-type(even) {
+  margin-left: 45px;
+  margin-right: 310px;
+}
+#feed .postLarge:last-of-type, #profile .postLarge:last-of-type {
   margin-bottom: 30px;
 }
-#feed .postLarge img:nth-of-type(1) {
+#feed .postLarge img:nth-of-type(1), #profile .postLarge img:nth-of-type(1) {
   width: 500px;
   height: 285px;
   padding: 0 0 17px 0;
 }
-#feed .postLarge img:nth-of-type(2), #feed .postLarge img:nth-of-type(3) {
+#feed .postLarge img:nth-of-type(2), #feed .postLarge img:nth-of-type(3), #profile .postLarge img:nth-of-type(2), #profile .postLarge img:nth-of-type(3) {
   margin-right: 10px;
 }
-#feed .postLarge img:nth-of-type(2) {
+#feed .postLarge img:nth-of-type(2), #profile .postLarge img:nth-of-type(2) {
   margin-bottom: 2px;
 }
-#feed .postLarge img:nth-of-type(3) {
+#feed .postLarge img:nth-of-type(3), #profile .postLarge img:nth-of-type(3) {
   margin-bottom: 3px;
 }
-#feed .postLarge a {
+#feed .postLarge a, #profile .postLarge a {
   margin: 0 120px 0 20px;
 }
-#feed .postLarge p {
+#feed .postLarge p, #profile .postLarge p {
   display: inline;
 }
-#feed .postLarge p:nth-of-type(1) {
+#feed .postLarge p:nth-of-type(1), #profile .postLarge p:nth-of-type(1) {
   margin-right: 120px;
 }
 .footer {
