@@ -1,0 +1,22 @@
+{
+  "name": "frontendframework",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Trichh"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-bootstrap": "1.2.1",
+    "angularfire": "1.1.4"
+  }
+}
