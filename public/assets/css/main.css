@@ -82,6 +82,12 @@ nav img {
   margin: 30px 0 0 500px;
   font-size: 65px;
 }
+#search article:nth-of-type(1) h1 {
+  display: inline-block;
+  width: 405px;
+  margin: 30px 0 0 400px;
+  font-size: 65px;
+}
 #feed .postLarge, #profile .postLarge {
   width: 501px;
   height: 330px;
@@ -121,6 +127,31 @@ nav img {
 }
 #feed .postLarge p:nth-of-type(1), #profile .postLarge p:nth-of-type(1) {
   margin-right: 120px;
+}
+#search div {
+  width: 850px;
+  margin: 30px 0 0 180px;
+  padding: 0;
+  border: solid 1px black;
+  border-bottom: solid 0 black;
+}
+#search div article {
+  border-bottom: solid 1px black;
+}
+#search div article img {
+  width: 150px;
+  margin: 20px 0 20px 30px;
+  border-radius: 50%;
+}
+#search div article h2 {
+  display: inline-block;
+}
+#search div article h2:nth-of-type(1) {
+  float: right;
+  margin: 73px 480px 0 0;
+}
+#search div article h2 span {
+  font-size: 18px;
 }
 .footer {
   position: absolute;
