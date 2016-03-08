@@ -1,24 +1,28 @@
 angular.module('gifyApp')
-.controller('HomeCtrl', function($scope, $rootScope, $firebaseAuth, $firebaseArray, $location) {
+.controller('HomeCtrl', function($scope, $rootScope, $firebaseAuth, $firebaseArray, $firebaseObject, $location) {
   var ref = new Firebase("https://gify.firebaseio.com");
   $rootScope.authObj = $firebaseAuth(ref);
   
   $rootScope.loggedIn = false;
-  console.log("What state? ", $scope.loggedIn);
   
+  // registering user
   $scope.register = function() {
     $scope.authObj.$createUser({
       email: $scope.newuser.email,
       password: $scope.newuser.password
     })
     .then(function(userData) {
+      // creating username in database
+      var ref = new Firebase("https://gify.firebaseio.com/users/"+userData.uid);
+      var user = $firebaseObject(ref);
+      user.username = $scope.newuser.username;
+      user.$save();
       return $scope.authObj.$authWithPassword({
         email: $scope.newuser.email,
         password: $scope.newuser.password
       });
     })
     .then(function(authData) {
-//      console.log("Logged in as:", authData.uid);
       $rootScope.loggedIn = true;
       $location.path('/feed')
     })
