@@ -19,5 +19,5 @@ app.use(express.static('public'))
 
 
 var server = app.listen(process.env.PORT || 3000, function(){
-  console.log('######## Server live on PORT: ', server.address().port);
+  console.log('Magic is happening on PORT: ', server.address().port);
 })
