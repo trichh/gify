@@ -1,0 +1,1 @@
+angular.module('gifyApp', ['ngRoute', 'ngAnimate', 'firebase', 'ui.bootstrap'])
