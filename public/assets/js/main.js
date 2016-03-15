@@ -38,13 +38,23 @@ angular.module('gifyApp')
 
       var images = new Firebase("https://gify.firebaseio.com/images/"+uid+"/posts/"); //Get feed of user's posts
       var imgArray = $firebaseArray(images); // asign it to an Firebase Array.
+      var post = imgArray;
+      console.log(post);
       
       imgArray.$loaded().then(function() {
-        //loads the object from Firebase
-        // reads username from Firebase
+        //loads the array from Firebase
+        // reads image from Firebase
         $scope.images = imgArray;
-        console.log("DATA",  $scope.images[0].$value);
+        var post = $scope.images[0]
+        $scope.removePost = function(post) {
+          console.log('REMOVE', post);
+          imgArray.$remove(post).then(function(images) {
+            images.key() === post.$id; // true
+          });
+        }
       });
+      
+      
 
     } else {
       $rootScope.loggedIn = false;
