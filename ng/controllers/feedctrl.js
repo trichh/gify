@@ -15,17 +15,23 @@ angular.module('gifyApp')
         //loads the object from Firebase
         // reads username from Firebase
         $rootScope.user = obj;
-
       });
 
-      var feed = new Firebase("https://gify.firebaseio.com/feed/"+uid); //Get feed of user's posts
-      var array = $firebaseArray(feed); // asign it to an Firebase Array.
+      var images = new Firebase("https://gify.firebaseio.com/images/"+uid+"/posts/"); //Get feed of user's posts
+      var imgArray = $firebaseArray(images); // asign it to an Firebase Array.
       
+      imgArray.$loaded().then(function() {
+        //loads the object from Firebase
+        // reads username from Firebase
+        $scope.images = imgArray;
+        console.log("DATA",  $scope.images[0].$value);
+      });
 
     } else {
       $rootScope.loggedIn = false;
       $location.path('/');
-    }
-  });
+    };// end IF
+    
+  });// ends $onAuth
   
 });

@@ -27,7 +27,7 @@ nav img {
   margin-right: 15px;
 }
 .navbar .container-fluid .navbar-collapse ul {
-  margin-top: 43px;
+  margin-top: -40px;
   margin-right: 40px;
   list-style: none;
 }
@@ -35,11 +35,18 @@ nav img {
   display: inline-block;
   font-size: 28px;
 }
+.navbar .container-fluid .navbar-collapse ul  li:nth-of-type(1) img {
+  padding-left: 0;
+}
 .navbar .container-fluid .navbar-collapse ul  li:nth-of-type(2) {
+  padding-left: 80px;
+}
+.navbar .container-fluid .navbar-collapse ul  li:nth-of-type(3), .navbar .container-fluid .navbar-collapse ul  li:nth-of-type(4) {
   padding-left: 100px;
 }
 .navbar .container-fluid .navbar-collapse ul  li a {
   color: white;
+  text-decoration: none;
 }
 .navbar .container-fluid .navbar-collapse ul  li a:hover {
   color: #69bd45;
@@ -152,6 +159,25 @@ nav img {
 }
 #search div article h2 span {
   font-size: 18px;
+}
+#upload article:nth-of-type(1) h1 {
+  display: inline-block;
+  width: 405px;
+  margin: 30px 0 0 500px;
+  font-size: 65px;
+}
+#upload article:nth-of-type(2) img {
+  margin: 30px 0 0 553px;
+}
+#upload article:nth-of-type(2) #loading {
+  margin: 30px 0 30px 585px;
+}
+#upload article:nth-of-type(3) form {
+  margin-left: 550px;
+}
+#upload article:nth-of-type(3) button {
+  font-size: 20px;
+  margin-left: 75px;
 }
 .footer {
   position: absolute;
