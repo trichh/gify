@@ -31,38 +31,31 @@ angular.module('gifyApp')
       var obj = $firebaseObject(user); // turns that obj in firebase object
 
       obj.$loaded().then(function() {
-        //loads the object from Firebase
+        // loads the object from Firebase
         // reads username from Firebase
         $rootScope.user = obj;
       });
 
       var images = new Firebase("https://gify.firebaseio.com/images/"+uid+"/posts/"); //Get feed of user's posts
       var imgArray = $firebaseArray(images); // asign it to an Firebase Array.
-      var post = imgArray;
-      console.log(post);
       
       imgArray.$loaded().then(function() {
-        //loads the array from Firebase
+        // loads the array from Firebase
         // reads image from Firebase
         $scope.images = imgArray;
         var post = $scope.images[0]
+        // removes post from Firebase
         $scope.removePost = function(post) {
-          console.log('REMOVE', post);
           imgArray.$remove(post).then(function(images) {
             images.key() === post.$id; // true
           });
         }
       });
-      
-      
-
     } else {
       $rootScope.loggedIn = false;
       $location.path('/');
     };// end IF
-    
   });// ends $onAuth
-  
 }]);
 angular.module('gifyApp')
 .controller('HomeCtrl', ["$scope", "$rootScope", "$firebaseAuth", "$firebaseArray", "$firebaseObject", "$location", function($scope, $rootScope, $firebaseAuth, $firebaseArray, $firebaseObject, $location) {

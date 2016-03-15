@@ -133,7 +133,15 @@ nav img {
   display: inline;
 }
 #feed .postLarge p:nth-of-type(1), #profile .postLarge p:nth-of-type(1) {
-  margin-right: 120px;
+  margin-right: 20px;
+}
+
+#feed .postLarge p:nth-of-type(2), #profile .postLarge p:nth-of-type(2) {
+  margin-right: 150px;
+}
+#feed .postLarge button {
+  margin-top: -2px;
+  font-size: 10px;
 }
 #search div {
   width: 850px;
