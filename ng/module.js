@@ -1,1 +1,1 @@
-angular.module('gifyApp', ['ngRoute', 'ngAnimate', 'firebase', 'ui.bootstrap'])
+var gifyApp = angular.module('gifyApp', ['ngRoute', 'ngAnimate', 'firebase', 'ui.bootstrap', 'cloudinary', 'ngFileUpload'])

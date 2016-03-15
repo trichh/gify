@@ -10,5 +10,9 @@ angular.module('gifyApp')
       templateUrl: 'views/feed.html',
       controller: 'FeedCtrl'
     })
+    .when('/upload', {
+      templateUrl: 'views/upload.html',
+      controller: 'UploadCtrl'
+    })
     .otherwise('/');
 })

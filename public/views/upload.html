@@ -1,0 +1,17 @@
+<section id="upload" class="container-fluid">
+  <article class="col-md-6 col-xs-4">
+    <h1>Upload Gif</h1>
+  </article>
+  <article class="col-md-12 col-xs-12">
+    <img id="loading" src="../assets/imgs/loading.gif" width="175" alt="Uploading Image" ng-show="!show" />
+    <img src="../assets/imgs/cloud.png" width="230" alt="Cloud" ng-show="show" />
+  </article>
+  <article class="col-md-12 col-xs-12" ngf-drop="uploadFiles($files)" ngf-drag-over-class="dragOverClass($event)" ng-model="files" ng-multiple="true">
+    <form>
+      <button type="submit" class="btn btn-success" ngf-select="uploadFiles($files)">Upload</button>
+    </form>
+  </article>
+</section>
+<footer class="footer">
+      <p><span>Copyright &#169; 2016 Gify.</span> All rights reserved.</p>
+</footer>
