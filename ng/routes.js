@@ -14,5 +14,9 @@ angular.module('gifyApp')
       templateUrl: 'views/upload.html',
       controller: 'UploadCtrl'
     })
+    .when('/profile', {
+      templateUrl: 'views/profile.html',
+      controller: 'ProfileCtrl'
+    })
     .otherwise('/');
 })
