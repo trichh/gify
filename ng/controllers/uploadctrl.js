@@ -45,7 +45,6 @@ angular.module('gifyApp')
               newImage.photo = imageUrl;
               newImage.likes = 0;
               image.$add(newImage);
-              console.log(newImage);
             })
             .error(function (data, status, headers, config) {
               file.result = data;
