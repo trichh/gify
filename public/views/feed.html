@@ -3,7 +3,7 @@
     <h1>Gif Feed</h1>
   </article>
   
-  <article class="postLarge col-md-12 col-xs-12" ng-repeat="post in images">
+  <article class="postLarge col-md-12 col-xs-12" ng-repeat="post in images | orderBy: '-'">
     <img class="col-md-12 col-xs-12" ng-src={{post.photo}} alt="Surfing Gif" />
     <a href="profile.html">{{user.username}}</a>
     <img src="assets/imgs/repost.png" alt="Repost Button" /><p>{{post.likes}}</p>
