@@ -24,6 +24,14 @@ angular.module('gifyApp')
         // loads the array from Firebase
         // reads image from Firebase
         $scope.images = imgArray;
+        
+        // updates like count in firebase
+        $scope.increaseCount = function(post) {
+          ++post.likes;
+          imgArray.$save(post).then(function(images) {
+            images.key() === post.$id; // true
+          });
+        }
       });
     } else {
       $rootScope.loggedIn = false;
